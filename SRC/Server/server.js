@@ -1,21 +1,27 @@
 // Empty Passthrough for data
 const projectData = [];
 
+// Use .env to hide environmental variables
+const dotenv = require('dotenv')
+dotenv.config();
 
+// Express server & Setup
 const express = require('express');
-
 const app = express();
+app.use(express.static('dist'));
 
-
+// Body Parser setup
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
+// Cors Setup
 const cors = require('cors');
 app.use(cors());
 
-app.use(express.static('dist'));
+
+
+//Server functionality
 
 const port = process.env.PORT || 3000;
 
