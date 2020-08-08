@@ -6,7 +6,7 @@ const userFeel = document.getElementById('feelings');
 const date = document.getElementById('date');
 const temp = document.getElementById('temp');
 const content = document.getElementById('content');
-const thePort = process.env.PORT || 3000;
+const thePort = 3000;
 const server = `http://localhost:${thePort}`;
 // Create a new date instance dynamically with JS
 let d = new Date();
