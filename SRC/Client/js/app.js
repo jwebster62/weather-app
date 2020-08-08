@@ -6,8 +6,9 @@ const userFeel = document.getElementById('feelings');
 const date = document.getElementById('date');
 const temp = document.getElementById('temp');
 const content = document.getElementById('content');
-const server = 'http://localhost:3000'
-    // Create a new date instance dynamically with JS
+const thePort = process.env.PORT || 3000;
+const server = `http://localhost:${thePort}`;
+// Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + '/' + d.getDate() + '/' + d.getFullYear();
 
@@ -23,7 +24,7 @@ const findWeather = async(mainURL, userZip, apiID) => {
     } catch (e) {
         throw e
     }
-}
+};
 
 const postData = async(path, data) => {
     try {
@@ -37,13 +38,13 @@ const postData = async(path, data) => {
     } catch (e) {
         throw e
     }
-}
+};
 
 const updateUI = async(temps, newDate, feelings) => {
     date.innerText = newDate
     temp.innerText = `${temps}°F`
     content.innerText = feelings
-}
+};
 
 document.getElementById('generate').addEventListener('click', () => {
     findWeather(mainURL, zip.value, apiID)
@@ -51,11 +52,11 @@ document.getElementById('generate').addEventListener('click', () => {
             return { date: newDate, temp, content: feelings.value }
         })
         .then(data => {
-            postData('/add', data)
+            postData(`${server}/add`, data)
             return data
         })
         .then(({ temp, date, content }) => updateUI(temp, date, content))
         .catch(e => {
             console.log(e)
         })
-})
+});
