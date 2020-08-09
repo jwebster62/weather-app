@@ -1,3 +1,5 @@
+const loadGif = document.getElementById('load')
+
 async function formSubmit(event) {
     console.info(':::Validating form submission:::');
     event.preventDefault();
@@ -29,6 +31,18 @@ async function formSubmit(event) {
         alert('Please input valid data!');
         return false;
     }
-    document.getElementById('load')
+    //placeholder for a loading gif
+    //loadGif.classList.remove('hidden');
+
+    console.info('::: Input valid, Submitting form! :::')
+
+    tripData = await fetchTripInfo(data).then((res) => {
+        loadGif.classList.add('hidden');
+        showCurrentSearch(res);
+        return res;
+    });
+    //Come back and add function to save data.
 
 };
+
+export { formSubmit };
