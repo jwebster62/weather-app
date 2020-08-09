@@ -1,31 +1,31 @@
 {
-  "name": "Capstone-Travel-App",
-  "version": "1.0.0",
-  "description": "This is my entry for the 5th and final project in Udacity's Front End Web Developer Nanodegree, The Capstone Travel App.",
-  "main": "index.js",
-  "dependencies": {
-    "babel": "^6.23.0",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "node": "^14.7.0",
-    "node-fetch": "^2.6.0",
-    "webpack": "^4.44.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jwebster62/Capstone-Travel-App.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jwebster62/Capstone-Travel-App/issues"
-  },
-  "homepage": "https://github.com/jwebster62/Capstone-Travel-App#readme"
+    "name": "capstone-travel-app",
+    "version": "1.0.0",
+    "description": "This is my entry for the 5th and final project in Udacity's Front End Web Developer Nanodegree, The Capstone Travel App.",
+    "main": "index.js",
+    "dependencies": {
+        "babel": "^6.23.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "node": "^14.7.0",
+        "node-fetch": "^2.6.0",
+        "webpack": "^4.44.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jwebster62/Capstone-Travel-App.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jwebster62/Capstone-Travel-App/issues"
+    },
+    "homepage": "https://github.com/jwebster62/Capstone-Travel-App#readme"
 }
