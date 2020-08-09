@@ -1,6 +1,6 @@
-# Weather-Journal App Project
+# Capstone Travel App
 
-This is my entry for the Weather Journal App Project
+This is my entry for the 5th and final project in Udacity's Front End Web Developer Nanodegree, The Capstone Travel App.
 
 # Goals
 * Make a request using the API through OpenWeatherApp to get the location's temperature utilizing user's zip code input.
