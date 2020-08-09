@@ -1,8 +1,8 @@
 /* Global Variables */
-const apiID = '2ec8b15d6b7487667d0362508db41ea4';
-const mainURL = 'https://api.openweathermap.org/data/2.5/weather';
-const userZip = document.getElementById('zip');
-const userFeel = document.getElementById('feelings');
+const weatherKey = 'process.env.WEATHER_KEY';
+const weatherURL = 'https://api.openweathermap.org/data/2.5/weather';
+const userDest = document.getElementById('destInput');
+const userFeel = document.getElementById('depInput');
 const date = document.getElementById('date');
 const temp = document.getElementById('temp');
 const content = document.getElementById('content');
@@ -12,9 +12,9 @@ let d = new Date();
 let newDate = d.getMonth() + '/' + d.getDate() + '/' + d.getFullYear();
 
 //Get the temp/weather
-const findWeather = async(mainURL, userZip, apiID) => {
+const findWeather = async(weatherURL, userDest, weatherKey) => {
     try {
-        const req = await fetch(`${mainURL}?zip=${userZip},us&units=imperial&APPID=${apiID}`, )
+        const req = await fetch(`${weatherURL}?zip=${userDest},us&units=imperial&APPID=${weatherKey}`, )
         const results = await req.json()
         const {
             main: { temp },
@@ -39,16 +39,16 @@ const postData = async(path, data) => {
     }
 };
 
-const updateUI = async(temps, newDate, feelings) => {
+const updateUI = async(temps, newDate, depInput) => {
     date.innerText = newDate
     temp.innerText = `${temps}°F`
-    content.innerText = feelings
+    content.innerText = depInput
 };
 
-document.getElementById('generate').addEventListener('click', () => {
-    findWeather(mainURL, zip.value, apiID)
+document.getElementById('Submit').addEventListener('click', () => {
+    findWeather(weatherURL, destInput.value, weatherKey)
         .then(temp => {
-            return { date: newDate, temp, content: feelings.value }
+            return { date: newDate, temp, content: depInput.value }
         })
         .then(data => {
             postData('/add', data)
