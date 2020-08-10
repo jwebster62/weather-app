@@ -4,25 +4,33 @@
     "description": "This is my entry for the 5th and final project in Udacity's Front End Web Developer Nanodegree, The Capstone Travel App.",
     "main": "index.js",
     "dependencies": {
-        "babel": "^6.23.0",
         "body-parser": "^1.19.0",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
+        "fs": "0.0.1-security",
         "node": "^14.7.0",
         "node-fetch": "^2.6.0",
         "webpack": "^4.44.1"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-loader": "^8.1.0",
+        "webpack-cli": "^3.3.12"
+    },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/server/index.js",
+        "build-prod": "webpack --config webpack.prod.js",
+        "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
+        "build": "webpack"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jwebster62/Capstone-Travel-App.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Joshua Webster",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/jwebster62/Capstone-Travel-App/issues"
