@@ -1,3 +1,5 @@
+//Bring in API functions
+const getGeo = require('./geoAPI');
 // Empty Passthrough for data
 const projectData = [];
 
