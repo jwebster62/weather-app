@@ -1,5 +1,6 @@
 //Bring in API functions
 const getGeo = require('./geoAPI');
+const getWeather = require('./weatherAPI');
 // Empty Passthrough for data
 const projectData = [];
 
