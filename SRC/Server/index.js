@@ -34,18 +34,31 @@ function listening() {
     console.log(`Server running on localhost: ${port}`);
 }
 
-app.post('/add', input);
+//Travel Data Variables
+const travelData = {
+    dep: 'from',
+    dest: {
+        city: 'to',
+        country: '',
+        country_code: '',
+        lat: '',
+        lon: '',
+        population: ''
+    },
+    id: '',
+    date: '',
 
-function input(req, res) {
-    projectData[date] = req.body.date;
-    projectData[temp] = req.body.temp;
-    projectData['content'] = req.body.content;
-    res.send(projectData);
-}
+    weather: {
+        temp: '',
+        desc: ''
+    }
+
+};
+
+//Getting the travel data
+app.post('/travelData', async(req, res) => {
+    travelData.dep = req.body.dep;
+    travelData.date = req.body.date;
 
 
-app.get('/all', getInput);
-
-function getInput(req, res) {
-    res.send(projectData);
-}
+});
