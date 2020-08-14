@@ -57,8 +57,20 @@ const travelData = {
 
 //Getting the travel data
 app.post('/travelData', async(req, res) => {
+
+    //Departure information
     travelData.dep = req.body.dep;
     travelData.date = req.body.date;
+
+    //Destination Information
+    let travelDestData = await getGeo(req.body.dest, process.env.GEO_KEY);
+    travelData.dest.city = travelDestData.city;
+    travelData.dest.country_code = travelDestData.country_code;
+    travelData.dest.lat = travelDestData.lat;
+    travelData.dest.lon = travelDestData.lon;
+
+    //Weather Information
+
 
 
 });

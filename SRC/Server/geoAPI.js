@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const fetchGeo = async(dest = '', key) => {
+const getGeo = async(dest = '', key) => {
     const geoURL = `http://api.geonames.org/search?username=${key}&type=json&name=`;
 
     let res = await fetch(geoURL + dest);
@@ -27,4 +27,4 @@ const fetchGeo = async(dest = '', key) => {
     };
 };
 
-module.exports = fetchGeo;
+module.exports = getGeo;
