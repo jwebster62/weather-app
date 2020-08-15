@@ -13,7 +13,7 @@ const getGeo = async(dest = '', geoKey) => {
             return {
                 lat: geoData.lat.slice(0, 6),
                 lon: geoData.lng.slice(0, 6),
-                country: geoData.countryCode,
+                country_code: geoData.countryCode,
                 city: geoData.name
             }
         };
