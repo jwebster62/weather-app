@@ -5,7 +5,7 @@ const getWeather = async(lat, lon, date, weatherKey) => {
     let prevYear = date.split('-');
     prevYear[0] = (parseInt(prevYear[0]) - 1).toString();
     prevYear = prevYear.join('-');
-    url = `${weatherURL}key=${weatherKey}&lat=${lat}&lon=${lon}&start_date=${prevYear}:12&end_date=${prevYear}:13`;
+    url = `${weatherURL}key=${weatherKey}&lat=${lat}&lon=${lon}&start_date=${prevYear}:12&end_date=${prevYear}:13&units=I`;
 
 
     let res = await fetch(url);
