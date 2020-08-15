@@ -1,5 +1,3 @@
-const loadGif = document.getElementById('load')
-
 async function formSubmit(event) {
     console.info(':::Validating form submission:::');
     event.preventDefault();
@@ -7,9 +5,9 @@ async function formSubmit(event) {
     let dest = document.getElementById('destInput').value;
     let date = document.getElementById('date').value;
 
-    let data = {
-        departure: dept,
-        destination: dest,
+    let tripData = {
+        dept: dept,
+        dest: dest,
         date: date
     };
 
@@ -36,9 +34,11 @@ async function formSubmit(event) {
 
     console.info('::: Input valid, Submitting form! :::')
 
-    tripData = await fetchTripInfo(data).then((res) => {
-        loadGif.classList.add('hidden');
-        showCurrentSearch(res);
+    tripData = await fetchTripInfo(tripData).then((res) => {
+        if (res.ok)
+        //loadGif.classList.add('hidden');
+            showCurrentSearch(res);
+        console.log(res);
         return res;
     });
     //Come back and add function to save data.
