@@ -1,8 +1,9 @@
 const fetch = require('node-fetch');
 
-const getGeo = async(dest = '', key) => {
-    const geoURL = `http://api.geonames.org/search?username=${key}&type=json&name=`;
-
+const getGeo = async(dest = '', geoKey) => {
+    const geoURL = `http://api.geonames.org/search?username=${geoKey}&type=json&name=`;
+    console.log(`My dest: ${dest}`)
+    console.log(`My key: ${geoKey}`)
     let res = await fetch(geoURL + dest);
 
     if (res.ok) {
@@ -11,7 +12,7 @@ const getGeo = async(dest = '', key) => {
             geoData = geoData.geonames[0];
             return {
                 lat: geoData.lat.slice(0, 6),
-                lon: geoData.lng.slive(0, 6),
+                lon: geoData.lng.slice(0, 6),
                 country: geoData.countryCode,
                 city: geoData.name
             }

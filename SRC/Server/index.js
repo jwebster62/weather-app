@@ -4,7 +4,7 @@ const getWeather = require('./weatherAPI');
 const restApi = require('./rest');
 // Pull in API keys
 const weatherKey = process.env.WEATHER_KEY;
-const geoKey = process.env.GEO_KEY;
+
 const picsKey = process.env.PIX_KEY;
 
 // Empty Passthrough for data
@@ -68,7 +68,7 @@ app.post('/travelData', async(req, res) => {
     travelData.date = req.body.date;
 
     //Destination Information
-    let travelDestData = await getGeo(req.body.dest, geoKey);
+    let travelDestData = await getGeo(req.body.dest, process.env.GEO_KEY);
     travelData.dest.city = travelDestData.city;
     travelData.dest.country_code = travelDestData.country_code;
     travelData.dest.lat = travelDestData.lat;

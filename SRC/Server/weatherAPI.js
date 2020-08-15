@@ -5,10 +5,11 @@ const getWeather = async(lat, lon, date, weatherKey) => {
     let prevYear = date.split('-');
     prevYear[0] = (parseInt(prevYear[0]) - 1).toString();
     prevYear = prevYear.join('-');
-    url = `${weatherURL}key=${weatherKey}&lat=${lat}&lon=${lon}&start_date=${prevYear}:12&end_date=${prevYear}:13`;
+    url = `${weatherURL}key=${weatherKey}&lat=${lat}&lon=${lon}&start_date=${prevYear}&end_date=${prevYear}`;
 
     let res = await fetch(url);
-
+    console.log(`weather api respons: ${res.status} ${res.statusText}`);
+    console.log(`Test lat: ${lat} lon: ${lon}`)
     if (res.ok) {
         let weatherData = await res.json();
         return {
