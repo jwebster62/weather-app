@@ -1,6 +1,7 @@
 //Bring in API functions
 const getGeo = require('./geoAPI');
 const getWeather = require('./weatherAPI');
+const restApi = require('./rest');
 // Pull in API keys
 const weatherKey = process.env.WEATHER_KEY;
 const geoKey = process.env.GEO_KEY;
@@ -90,4 +91,5 @@ app.post('/travelData', async(req, res) => {
     travelData.weather.desc = weatherInfo.weather_desc;
 
     res.send(travelData);
+    console.log(travelData)
 });
