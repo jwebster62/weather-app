@@ -1,3 +1,4 @@
+import getTripInfo from './app';
 async function formSubmit(event) {
     console.info(':::Validating form submission:::');
     event.preventDefault();
@@ -5,7 +6,7 @@ async function formSubmit(event) {
     let dest = document.getElementById('destInput').value;
     let date = document.getElementById('date').value;
 
-    let tripData = {
+    let info = {
         dept: dept,
         dest: dest,
         date: date
@@ -34,7 +35,7 @@ async function formSubmit(event) {
 
     console.info('::: Input valid, Submitting form! :::')
 
-    tripData = await fetchTripInfo(tripData).then((res) => {
+    tripData = await getTripInfo(info).then((res) => {
         if (res.ok)
         //loadGif.classList.add('hidden');
             showCurrentSearch(res);
