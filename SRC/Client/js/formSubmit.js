@@ -2,18 +2,18 @@ import getTripInfo from './app';
 async function formSubmit(event) {
     console.info(':::Validating form submission:::');
     event.preventDefault();
-    let dept = document.getElementById('depInput').value;
+    let dep = document.getElementById('depInput').value;
     let dest = document.getElementById('destInput').value;
     let date = document.getElementById('date').value;
 
     let info = {
-        dept: dept,
+        dep: dep,
         dest: dest,
         date: date
     };
 
     let tripData;
-    console.info(dept, dest, date);
+    console.info(dep, dest, date);
 
     //Validate Form Input
     const regInput = /[a-zA-Z]+/;
@@ -26,7 +26,7 @@ async function formSubmit(event) {
         return newDate - today > 0;
     };
     // Verify All Inputs
-    if (!dept.match(regInput) || !dest.match(regInput) || !date.match(regDate) || !verifyDate(date)) {
+    if (!dep.match(regInput) || !dest.match(regInput) || !date.match(regDate) || !verifyDate(date)) {
         alert('Please input valid data!');
         return false;
     }

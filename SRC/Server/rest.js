@@ -4,7 +4,7 @@ const restApi = async(code = '') => {
     const restUrl = 'https://restcountries.eu/rest/v2/alpha/';
 
     let res = await fetch(restUrl + code);
-    console.log('RestAPI', res.ok);
+
 
     if (res.ok) {
         let restData = await res.json();

@@ -85,10 +85,10 @@ app.post('/travelData', async(req, res) => {
         travelData.dest.lat,
         travelData.dest.lon,
         travelData.date,
-        weatherKey
+        process.env.WEATHER_KEY
     );
     travelData.weather.temp = weatherInfo.temp;
-    travelData.weather.desc = weatherInfo.weather_desc;
+    travelData.weather.desc = weatherInfo.desc;
 
     res.send(travelData);
     console.log(travelData)
