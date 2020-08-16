@@ -1,7 +1,6 @@
         $form-background: rgb(36, 158, 206);
         .app {
             display: grid;
-            //grid-auto-rows: minmax(150px, 150px);
             grid-template-columns: 1fr;
             height: 50px;
             padding-top: 15px;
@@ -122,11 +121,19 @@
             }
         }
         
-        @media (min-width: 1024px) {
+        @media (min-width: 1200px) {
             .app {
-                grid-template-columns: auto auto auto auto auto auto auto;
+                min-height: 100px;
             }
             .form {
                 float: none;
+            }
+            .form label {
+                margin: unset;
+                ;
+            }
+            .field {
+                display: flex;
+                flex-direction: row;
             }
         }
