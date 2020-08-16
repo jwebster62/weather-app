@@ -7,9 +7,6 @@ const weatherKey = process.env.WEATHER_KEY;
 
 const picsKey = process.env.PIX_KEY;
 
-// Empty Passthrough for data
-const projectData = [];
-
 // Use .env to hide environmental variables
 const dotenv = require('dotenv')
 dotenv.config();
@@ -50,7 +47,6 @@ const travelData = {
         lat: '',
         lon: '',
     },
-    id: '',
     date: '',
 
     weather: {

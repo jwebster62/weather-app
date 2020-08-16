@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const fileLoaderPlugin = require('file-loader');
 
 module.exports = {
     entry: './src/client/index.js',
@@ -21,6 +22,13 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [{
+                    loader: 'file-loader'
+
+                }]
             }
         ]
     },
