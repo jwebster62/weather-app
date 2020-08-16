@@ -3,7 +3,7 @@ $form-background: rgb(36, 158, 206);
     display: grid;
     //grid-auto-rows: minmax(150px, 150px);
     grid-template-columns: auto auto auto auto auto auto auto auto;
-    height: 50px;
+    height: 2rem;
     padding-top: 15px;
     color: black;
     justify-content: space-evenly;
@@ -13,8 +13,8 @@ $form-background: rgb(36, 158, 206);
 }
 
 button {
-    width: 100px;
-    height: 50px;
+    width: 10rem;
+    height: 5rem;
     color: white;
     font-size: 20px;
     margin: auto;
@@ -27,7 +27,7 @@ button {
 
 input {
     display: block;
-    height: 60px;
+    height: 3rem;
     width: 320px;
     background: $form-background;
     color: black;
