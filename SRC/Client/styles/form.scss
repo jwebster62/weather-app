@@ -1,0 +1,49 @@
+$form-background: rgb(36, 158, 206);
+#app {
+    display: grid;
+    //grid-auto-rows: minmax(150px, 150px);
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    height: 50px;
+    padding-top: 15px;
+    color: black;
+    justify-content: space-evenly;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    color: black;
+    font-size: 20px;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    background-color: $form-background;
+}
+
+input {
+    display: block;
+    height: 60px;
+    width: 320px;
+    background: $form-background;
+    color: black;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+label {
+    display: block;
+    font-size: 27px;
+    background-color: rgb(214, 235, 92);
+}
+
+textarea {
+    background: #22b2da;
+    color: black;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
