@@ -1,148 +1,165 @@
-        $form-background: rgb(36, 158, 206);
-        .app {
-            display: grid;
-            grid-template-columns: 1fr;
-            height: 5em;
-            padding-top: 1rem;
-            padding-bottom: 5rem;
-            color: black;
-            justify-content: center;
-            font-size: 1rem;
-            font-family: 'Oswald', sans-serif;
-            min-height: 28rem;
-        }
-        
-        .form {
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-        }
-        
-        .field {
-            margin-top: .3rem;
-            margin-bottom: .3rem;
-        }
-        
-        .form label {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: .25rem;
-            height: 3rem;
-        }
-        
-        button {
-            width: 7rem;
-            height: 3.5rem;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1.25rem;
-            font-family: 'Oswald', sans-serif;
-            border: none;
-            background-color: black;
-            opacity: .75;
-        }
-        
-        input {
-            display: block;
-            height: 3.5rem;
-            width: 10em;
-            background: $form-background;
-            color: black;
-            font-family: 'Oswald', sans-serif;
-            border: none;
-        }
-        
-        input#date {
-            padding-right: .2rem;
-        }
-        
-        label {
-            display: block;
-            text-align: center;
-            height: 3.0rem;
-            font-size: 1.75rem;
-            color: rgb(238, 224, 224);
-            background-color: rgb(15, 125, 153);
-        }
-        /* Reset style for HTML element on active to have no border*/
-        
-        input:focus,
-        select:focus,
-        textarea:focus,
-        button:focus {
-            outline: none;
-        }
-        /* Style for Placeholder Text*/
-        
-         ::placeholder {
-            /* Firefox, Chrome, Opera */
-            color: black;
-            font-family: 'Oswald', sans-serif;
-        }
-        
-         :-ms-input-placeholder {
-            /* Internet Explorer 10-11 */
-            color: black;
-            font-family: 'Oswald', sans-serif;
-        }
-        
-         ::-ms-input-placeholder {
-            /* Microsoft Edge */
-            color: black;
-            font-family: 'Oswald', sans-serif;
-        }
-        
-        @media (min-width: 768px) {
-            .app {
-                //grid-auto-rows: minmax(150px, 150px);
-                grid-template-columns: auto auto auto auto;
-                min-height: 10rem;
-            }
-            .form {
-                flex-direction: row;
-                float: left;
-            }
-            .form label {
-                margin-top: auto;
-                margin-right: .3rem;
-                width: 10rem;
-            }
-            .form input {
-                width: 10rem;
-                margin-left: 0rem;
-                text-align: center;
-                padding-right: .4rem;
-            }
-            .form button {
-                margin-left: .3rem;
-            }
-            input#date {
-                padding-right: .45rem;
-            }
-        }
-        
-        @media (min-width: 1200px) {
-            .app {
-                min-height: 5rem;
-            }
-            .form {
-                float: none;
-            }
-            .form label {
-                margin-right: auto;
-                margin-left: .25rem;
-                padding-top: .35rem;
-            }
-            .form input {
-                margin-right: .5rem;
-            }
-            .field {
-                display: flex;
-                flex-direction: row;
-            }
-            input#date {
-                padding-bottom: .1rem;
-            }
-        }
+                    $form-background: rgb(36, 158, 206);
+                    * {
+                        box-sizing: border-box;
+                    }
+                    
+                    .app {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        height: 5em;
+                        padding-top: 1rem;
+                        padding-bottom: 5rem;
+                        color: black;
+                        justify-content: center;
+                        font-size: 1.25rem;
+                        font-family: 'Oswald', sans-serif;
+                        min-height: 28rem;
+                    }
+                    
+                    .form {
+                        display: flex;
+                        flex-direction: column;
+                        margin: auto;
+                    }
+                    
+                    .field {
+                        margin-top: .3rem;
+                        margin-bottom: .3rem;
+                    }
+                    
+                    .form label {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: .25rem;
+                        height: 3rem;
+                    }
+                    
+                    button {
+                        width: 7rem;
+                        height: 3.5rem;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        font-size: 1.25rem;
+                        font-family: 'Oswald', sans-serif;
+                        border: none;
+                        background-color: black;
+                        opacity: .75;
+                    }
+                    
+                    input {
+                        display: block;
+                        height: 3.5rem;
+                        width: 10em;
+                        background: $form-background;
+                        color: black;
+                        font-family: 'Oswald', sans-serif;
+                        border: none;
+                    }
+                    
+                    input#date {
+                        padding-right: .2rem;
+                    }
+                    
+                    label {
+                        display: block;
+                        text-align: center;
+                        height: 3.0rem;
+                        font-size: 1.25rem;
+                        color: rgb(238, 224, 224);
+                        background-color: rgb(15, 125, 153);
+                    }
+                    /* Reset style for HTML element on active to have no border*/
+                    
+                    input:focus,
+                    select:focus,
+                    textarea:focus,
+                    button:focus {
+                        outline: none;
+                    }
+                    /* Style for Placeholder Text*/
+                    
+                     ::placeholder {
+                        /* Firefox, Chrome, Opera */
+                        color: black;
+                        font-family: 'Oswald', sans-serif;
+                    }
+                    
+                     :-ms-input-placeholder {
+                        /* Internet Explorer 10-11 */
+                        color: black;
+                        font-family: 'Oswald', sans-serif;
+                    }
+                    
+                     ::-ms-input-placeholder {
+                        /* Microsoft Edge */
+                        color: black;
+                        font-family: 'Oswald', sans-serif;
+                    }
+                    
+                    @media only screen and (min-width: 768px) {
+                        .app {
+                            //grid-auto-rows: minmax(150px, 150px);
+                            grid-template-columns: auto auto auto auto;
+                            min-height: 10rem;
+                        }
+                        .form {
+                            flex-direction: row;
+                            float: left;
+                        }
+                        .form label {
+                            height: 4rem;
+                            margin-top: auto;
+                            margin-right: .3rem;
+                            margin-left: .3rem;
+                            width: 12rem;
+                        }
+                        .form input {
+                            height: 4rem;
+                            width: 12rem;
+                            margin-left: .3rem;
+                            margin-right: .3rem;
+                            text-align: center;
+                        }
+                        .form button {
+                            height: 4rem;
+                            margin-left: .3rem;
+                        }
+                        input#date {
+                            padding-right: .45rem;
+                        }
+                    }
+                    
+                    @media only screen and (min-width: 1200px) {
+                        .app {
+                            grid-template-columns: auto;
+                            min-height: 5rem;
+                        }
+                        .form {
+                            flex-direction: row;
+                            float: none;
+                        }
+                        .form label {
+                            margin-top: 0;
+                            margin-left: .3rem;
+                            margin-right: 0;
+                            height: 3rem;
+                            width: 8rem;
+                        }
+                        .form input {
+                            margin-top: 0;
+                            margin-right: .3rem;
+                            margin-left: 0;
+                            height: 3rem;
+                        }
+                        button {
+                            margin-left: .3rem;
+                            height: 3rem;
+                        }
+                        .field {
+                            display: flex;
+                            flex-direction: row;
+                            margin: 0;
+                        }
+                    }
