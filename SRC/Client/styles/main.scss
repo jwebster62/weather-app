@@ -6,13 +6,13 @@ h1 {
     font-size: 36px;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 768px) {
     body {
         background-color: rgba(231, 231, 231, 0.993);
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     body {
         background-image: url("/SRC/Client/media/sunrise-background.jpg");
         background-repeat: no-repeat;
