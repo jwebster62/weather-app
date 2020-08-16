@@ -1,5 +1,5 @@
 // Importing all styles
-import '../Client/styles/allStyles.scss';
+import '../Client/styles/imports.scss';
 
 //Import Functions
 import { formSubmit } from '../Client/js/formSubmit';

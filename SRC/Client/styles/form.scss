@@ -15,13 +15,14 @@ $form-background: rgb(36, 158, 206);
 button {
     width: 100px;
     height: 50px;
-    color: black;
+    color: white;
     font-size: 20px;
     margin: auto;
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
-    background-color: $form-background;
+    background-color: black;
+    opacity: .75;
 }
 
 input {
@@ -37,13 +38,46 @@ input {
 
 label {
     display: block;
+    text-align: center;
     font-size: 27px;
-    background-color: rgb(214, 235, 92);
+    color: rgb(238, 224, 224);
+    background-color: rgb(15, 125, 153);
 }
 
 textarea {
-    background: #22b2da;
+    background: $form-background;
     color: black;
     font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+/* Style for Placeholder Text*/
+
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black;
     font-family: 'Oswald', sans-serif;
 }
