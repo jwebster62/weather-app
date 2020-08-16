@@ -7,7 +7,7 @@
             padding-bottom: 5rem;
             color: black;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-family: 'Oswald', sans-serif;
             min-height: 28rem;
         }
@@ -27,7 +27,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: .75rem;
+            padding: .25rem;
             height: 3rem;
         }
         
@@ -50,15 +50,18 @@
             width: 10em;
             background: $form-background;
             color: black;
-            font-size: 1.5rem;
             font-family: 'Oswald', sans-serif;
             border: none;
+        }
+        
+        input#date {
+            padding-right: .2rem;
         }
         
         label {
             display: block;
             text-align: center;
-            height: 3.5rem;
+            height: 3.0rem;
             font-size: 1.75rem;
             color: rgb(238, 224, 224);
             background-color: rgb(15, 125, 153);
@@ -104,33 +107,42 @@
             .form label {
                 margin-top: auto;
                 margin-right: .3rem;
-                margin-left: 0.3rem;
                 width: 10rem;
             }
             .form input {
-                width: 11.25rem;
-                margin-right: .3rem;
-                margin-left: 0.3rem;
+                width: 10rem;
+                margin-left: 0rem;
                 text-align: center;
+                padding-right: .4rem;
             }
             .form button {
                 margin-left: .3rem;
+            }
+            input#date {
+                padding-right: .45rem;
             }
         }
         
         @media (min-width: 1200px) {
             .app {
-                min-height: 100px;
+                min-height: 5rem;
             }
             .form {
                 float: none;
             }
             .form label {
-                margin-right: 0px;
-                margin-left: 5px;
+                margin-right: auto;
+                margin-left: .25rem;
+                padding-top: .35rem;
+            }
+            .form input {
+                margin-right: .5rem;
             }
             .field {
                 display: flex;
                 flex-direction: row;
+            }
+            input#date {
+                padding-bottom: .1rem;
             }
         }
