@@ -31,15 +31,15 @@ async function formSubmit(event) {
         alert('Please input valid data!');
         return false;
     }
-    //placeholder for a loading gif
-    //loadGif.classList.remove('hidden');
+
 
     console.info('::: Input valid, Submitting form! :::')
 
     tripData = await getTripInfo(info).then((res) => {
-        if (res.ok)
-        //loadGif.classList.add('hidden');
-            newTrip(res);
+        newTrip(res);
+
+
+
         console.log(res);
         return res;
     });
