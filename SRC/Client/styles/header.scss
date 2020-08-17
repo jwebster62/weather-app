@@ -1,9 +1,15 @@
 .header {
-    color: black;
+    background-color: black;
+    color: rgb(148, 129, 129);
+    padding: 1rem 1rem 1rem 1rem;
+    font-weight: bold;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    top: 0;
+    height: 5rem;
+    width: 100%;
+    grid-template-columns: auto;
     justify-content: center;
     align-content: center;
-    background-color: rgb(36, 158, 206);
     opacity: .75;
+    margin-bottom: 3rem;
 }
