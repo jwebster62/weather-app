@@ -14,7 +14,8 @@ const getDestImg = async(city = '', country = '', pixKey) => {
     } else {
         console.log(`Error: Can't find image` + response.status + response.statusText + '.');
     }
-    return './src/client/media/penguin.png'
+    return './src/client/media/penguin.png';
+    // Image by OpenClipart-Vectors from Pixabay 
 };
 
 module.exports = getDestImg;
