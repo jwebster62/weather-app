@@ -58,10 +58,6 @@
                         border: none;
                     }
                     
-                    input#date {
-                        padding-right: .2rem;
-                    }
-                    
                     label {
                         display: block;
                         text-align: center;
@@ -126,9 +122,6 @@
                             height: 4rem;
                             margin-left: .3rem;
                         }
-                        input#date {
-                            padding-right: .45rem;
-                        }
                     }
                     
                     @media only screen and (min-width: 1200px) {
@@ -155,7 +148,11 @@
                         }
                         button {
                             margin-left: .3rem;
+                            width: 10rem;
+                            max-height: 3rem;
                             height: 3rem;
+                            padding-left: 1rem;
+                            padding-right: 1rem;
                         }
                         .field {
                             display: flex;
