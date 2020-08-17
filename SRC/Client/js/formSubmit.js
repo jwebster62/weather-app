@@ -1,4 +1,5 @@
 import getTripInfo from './app';
+import { newTrip } from './newTrip';
 async function formSubmit(event) {
     console.info(':::Validating form submission:::');
     event.preventDefault();
@@ -38,7 +39,7 @@ async function formSubmit(event) {
     tripData = await getTripInfo(info).then((res) => {
         if (res.ok)
         //loadGif.classList.add('hidden');
-            showCurrentSearch(res);
+            newTrip(res);
         console.log(res);
         return res;
     });
