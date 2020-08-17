@@ -48,7 +48,7 @@ const travelData = {
         lon: '',
     },
     date: '',
-
+    image: '',
     weather: {
         temp: '',
         desc: ''
@@ -83,6 +83,8 @@ app.post('/travelData', async(req, res) => {
         travelData.date,
         process.env.WEATHER_KEY
     );
+    //Destination Image
+
     travelData.weather.temp = weatherInfo.temp;
     travelData.weather.desc = weatherInfo.desc;
 
