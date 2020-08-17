@@ -2,10 +2,7 @@
 const getGeo = require('./geoAPI');
 const getWeather = require('./weatherAPI');
 const restApi = require('./rest');
-// Pull in API keys
-const weatherKey = process.env.WEATHER_KEY;
-
-const picsKey = process.env.PIX_KEY;
+const pixApi = require('./pixAPI');
 
 // Use .env to hide environmental variables
 const dotenv = require('dotenv')
@@ -73,8 +70,9 @@ app.post('/travelData', async(req, res) => {
     //country Data
     let countryInfo = await restApi(travelData.dest.country_code);
     travelData.dest.country = countryInfo.country;
+    //Destination Image
 
-
+    travelData.image = await pixApi(req.body.dest, '', process.env.PIX_KEY)
 
     //Weather Information
     let weatherInfo = await getWeather(
@@ -83,7 +81,7 @@ app.post('/travelData', async(req, res) => {
         travelData.date,
         process.env.WEATHER_KEY
     );
-    //Destination Image
+
 
     travelData.weather.temp = weatherInfo.temp;
     travelData.weather.desc = weatherInfo.desc;
