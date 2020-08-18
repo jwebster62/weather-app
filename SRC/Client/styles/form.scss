@@ -48,6 +48,28 @@
                         opacity: .75;
                     }
                     
+                    button:hover {
+                        cursor: pointer;
+                        background-color: green;
+                        color: white;
+                    }
+                    
+                    .dateInput:hover {
+                        cursor: pointer;
+                        background-color: wheat;
+                        color: black;
+                    }
+                    
+                    .dep:hover {
+                        background-color: wheat;
+                        color: black;
+                    }
+                    
+                    .dest:hover {
+                        background-color: wheat;
+                        color: black;
+                    }
+                    
                     input {
                         display: block;
                         height: 3.5rem;
