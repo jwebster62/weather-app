@@ -10,5 +10,4 @@ export const newTrip = (tripData) => {
     //Show Results
     document.getElementById('newTrip').classList.remove('hidden');
     document.getElementById('newTrip').classList.add('notHidden');
-    console.log(tripData.date);
 }
