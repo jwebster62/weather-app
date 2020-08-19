@@ -24,3 +24,5 @@ npm run test (to run the test cases)
 * Make a request using the API through weatherbit to get the location's temperature utilizing user's destination input.
 * Get data from server and update the UI
 
+# Extra(s)
+As part of the extend options/Ways to Stand out requirement I used the REST Countries API to get information about the country.
