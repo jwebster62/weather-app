@@ -89,3 +89,6 @@ app.post('/travelData', async(req, res) => {
     res.send(travelData);
     console.log(travelData)
 });
+
+
+module.exports = app;

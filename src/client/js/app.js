@@ -14,6 +14,7 @@ const getTripInfo = async(data) => {
     try {
         console.log("Trying..");
         console.log('done\n')
+        console.log(111 + res.json);
         return res.json();
     } catch (err) {
         console.log(err);
